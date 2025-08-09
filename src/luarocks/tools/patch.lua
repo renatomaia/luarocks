@@ -196,6 +196,7 @@ function patch.read_patch(filename, data)
 
       end
       if state == 'hunkbody' then
+         local line = line
 
 
          if line:match("^[\r\n]*$") then

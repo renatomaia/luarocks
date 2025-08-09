@@ -96,9 +96,9 @@ function util.show_table(t, tname, top_indent)
             else
                cart = cart .. " = {\n"
                for k, v in pairs(value) do
-                  k = basic_serialize(k)
-                  local fname = ("%s[%s]"):format(name, k)
-                  field = ("[%s]"):format(k)
+                  local key = basic_serialize(k)
+                  local fname = ("%s[%s]"):format(name, key)
+                  field = ("[%s]"):format(key)
 
                   add_to_cart(v, fname, indent .. "   ", saved, field)
                end
